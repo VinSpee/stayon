@@ -7,6 +7,7 @@
         u-flex
         u-flexRow
         u-flexAlignItemsCenter
+        u-posRelative
       "
     >
       {{#link-to
@@ -24,12 +25,41 @@
         </div>
       {{/link-to}}
       {{app-nav}}
-      {{person-avatar
-        class="blank-u-pdAbb"
-        size="medium"
-        imageURL=model.user.avatar
-        name=model.user.name
-      }}
+      {{#basic-dropdown renderInPlace=true as |dropdown|}}
+        <div
+          class="
+            u-posAbsolute
+            u-posOffBottom
+            u-posOffRight
+            u-depth u-depth3
+            Bubble
+          ">
+          <div class="
+            u-flex
+            Bubble-content
+          ">
+            <ul class="u-block">
+              <li class="Bubble-item">
+                {{#link-to 'index' class="Bubble-action"}}
+                  {{model.user.name}}
+                {{/link-to}}
+              </li>
+              <li class="Bubble-item">
+                {{#link-to 'index' class="Bubble-action"}}
+                  {{model.user.email}}
+                {{/link-to}}
+              </li>
+            </ul>
+          </div>
+        </div>
+        {{else}}
+        {{person-avatar
+          class="blank-u-pdAbb"
+          size="medium"
+          imageURL=model.user.avatar
+          name=model.user.name
+        }}
+      {{/basic-dropdown}}
     </header>
   {{/app-layout/header}}
   {{#app-layout/content}}

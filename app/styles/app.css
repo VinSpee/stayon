@@ -9,6 +9,7 @@
 @import "icon";
 @import "nav";
 @import "avatar";
+@import "bubble";
 
 :root {
 
@@ -89,6 +90,10 @@
 	--Nav-itemFg: var(--Theme-color--white);
 	--Nav-itemRadius: ms(-5)rem;
 
+	--Bubble-radius: ms(-5)rem;
+	--Bubble-bg: var(--Theme-color--yellow);
+	--Bubble-fg: var(--Theme-color--black);
+
 	/* [> Table <] */
 	/* --Table-border: 1px solid #D6DCE3; */
 	/* --Table-cellPadH: var(--ms-1); */
@@ -122,4 +127,36 @@ h1, h2, h3, h4, h5, h6 {
 
 :any-link {
 	color: inherit;
+}
+
+.u-posRight {
+	right: 0 !important;
+}
+
+.u-posBottom {
+	top: 100% !important;
+}
+
+.u-posLeft {
+	left: 0 !important;
+}
+
+.u-posTop {
+	bottom: 100% !important;
+}
+
+.u-posOffRight {
+	right: ms(-2)rem !important;
+}
+
+.u-posOffBottom {
+	top: calc(100% - .25rem) !important;
+}
+
+.u-posOffLeft {
+	left: ms(-2)rem !important;
+}
+
+.u-posOffTop {
+	bottom: calc(100% - .25rem) !important;
 }

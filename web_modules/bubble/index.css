@@ -1,0 +1,43 @@
+/** @define Bubble */
+
+:root {
+	--Bubble-radius: .25rem;
+	--Bubble-bg: black;
+	--Bubble-fg: white;
+}
+
+.Bubble {
+	border-radius: var(--Bubble-radius);
+	background-color: var(--Bubble-bg);
+	color: var(--Bubble-fg);
+}
+
+.Bubble-content {
+	padding: .25rem .5rem;
+	@nest &::before {
+		position: absolute;
+		content: '▾';
+		width: .5rem;
+		height: .5rem;
+		top: .2rem;
+		right: .75rem;
+		transform: rotate(180deg);
+		color: var(--Bubble-bg);
+	}
+}
+
+.Bubble-item {
+	@nest &:not(:last-of-type) {
+		@nest & > .Bubble-action {
+			box-shadow: 0 1px 0 0 color(var(--Bubble-fg) alpha(10%));
+		}
+	}
+}
+.Bubble-action {
+	display: inline-block;
+	width: 100%;
+	text-align: right;
+	text-transform: uppercase;
+	font-weight: bold;
+	padding: .5rem 1rem;
+}
