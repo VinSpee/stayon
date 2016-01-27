@@ -1,0 +1,125 @@
+@import "sanitize.css";
+@import "suitcss";
+@import "suitcss-depth";
+@import "blank-css-space";
+@import "blank-css-display";
+@import "theme";
+@import "app";
+@import "type";
+@import "icon";
+@import "nav";
+@import "avatar";
+
+:root {
+
+	/* modular scale */
+	--ms-bases: 1, 1.6180469716;
+	--ms-ratios: 2;
+
+	/* sanitize.css variables */
+	--root-box-sizing: border-box;
+	--root-cursor: default;
+	--font-family: var(--Theme-font);
+	--root-font-weight: var(--Type-weight--normal);
+	--root-font-size: 100%;
+	--root-line-height: 1.618;
+	--root-text-rendering: optimizeLegibility;
+	--html-background-color: var(--Theme-color--white);
+	--html-color: var(--Theme-color--black);
+	--anchor-text-decoration: none;
+	--form-element-background-color: transparent;
+	--media-element-vertical-align: middle;
+	--monospace-font-family: monospace;
+	--nav-list-style: none;
+	--selection-background-color: var(--Theme-color--lightyellow);
+	--selection-color: var(--Theme-color--gray);
+	--selection-text-shadow: none;
+	--small-font-size: var(--ms-1);
+	--table-border-collapse: collapse;
+	--table-border-spacing: 0;
+	--textarea-resize: vertical;
+
+	/* blank-css variables */
+	--blank-space-n: 0;
+	--blank-space-bb: ms(-2)rem;
+	--blank-space-sm: ms(-1)rem;
+	--blank-space-md: ms(0)rem;
+	--blank-space-lg: ms(1)rem;
+	--blank-space-gg: ms(2)rem;
+
+	/* Avatar */
+	--Avatar-size--sm: ms(2)rem;
+	--Avatar-size--md: ms(3)rem;
+	--Avatar-size--lg: ms(6)rem;
+	--Avatar-bg: var(--Theme-color--white);
+	/* Buttons */
+	/* --Button-bg--primary: var(--Theme-color--green); */
+	/* --Button-bg--secondary: var(--Theme-color--blue); */
+	/* --Button-radius: calc(var(--ms1) / 5); */
+	/* --Button-fg: var(--Theme-color--white); */
+	/* --Button-fg--primary: var(--Button-fg); */
+	/* --Button-fg--inverse: var(--Theme-color--darkblue); */
+
+	/* Grid */
+	--Grid-gutter-size: ms(0)rem;
+
+
+	/* [> Icons <] */
+	/* --Icon-size--bb: var(--ms-1); */
+	/* --Icon-size--sm: var(--ms0); */
+	/* --Icon-size--md: var(--ms1); */
+	/* --Icon-size--lg: var(--ms2); */
+	/* --Icon-size--xl: var(--ms3); */
+	/* --Icon-size--xlWider: var(--ms5); */
+
+	/* [> Inputs <] */
+	/* --Input-color: var(--Theme-color--black); */
+	/* --Input-color--focus: var(--Theme-color--blue); */
+	/* --Input-color--valid: var(--Theme-color--green); */
+	/* --Input-color--invalid: var(--Theme-color--red); */
+	/* --Input-formatColor: var(--Theme-color--gray); */
+	/* --Input-radius: var(--Theme-radius); */
+	/* --Input-selectboxColor: var(--Input-color); */
+	/* --Input-selectboxBorder: var(--Theme-color--blue); */
+	/* --Input-selectboxBackground: var(--Theme-color--white); */
+	/* --Input-selectbox-icon: "▾"; */
+
+	/* Nav */
+	--Nav-itemBg: var(--Theme-color--black);
+	--Nav-itemFg: var(--Theme-color--white);
+	--Nav-itemRadius: ms(-5)rem;
+
+	/* [> Table <] */
+	/* --Table-border: 1px solid #D6DCE3; */
+	/* --Table-cellPadH: var(--ms-1); */
+	/* --Table-cellPadV: .125rem; */
+	/* --Table-hoverColor: color(var(--Theme-color--green) alpha(50%)); */
+	/* --Table-stripeColor: color(var(--Theme-color--gray) alpha(50%)); */
+}
+
+@custom-media --bb (min-width: 22rem);
+@custom-media --sm (min-width: 29rem);
+@custom-media --md (min-width: 40rem);
+@custom-media --lg (min-width: 56rem);
+@custom-media --gg (min-width: 60rem);
+@custom-media --sm-viewport (min-width: 29rem);
+@custom-media --md-viewport (min-width: 40rem);
+@custom-media --lg-viewport (min-width: 56rem);
+
+html {
+	min-height: 100vh;
+	height: 100%;
+}
+
+body {
+	height: 100vh;
+	font-family: var(--Theme-font);
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-size: inherit;
+}
+
+:any-link {
+	color: inherit;
+}

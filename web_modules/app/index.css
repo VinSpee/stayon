@@ -1,0 +1,19 @@
+/** @define App */
+
+.App {
+	height: 100vh;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+}
+
+.App-footer,
+.App-header {
+	flex: 0 0 auto;
+}
+
+.App-content {
+	flex: 1 1 auto;
+	overflow-y: auto;
+	-webkit-overflow-scrolling: touch;
+}

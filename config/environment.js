@@ -1,22 +1,22 @@
-/* jshint node: true */
-
-module.exports = function(environment) {
-  var ENV = {
+module.exports = (environment) => {
+  const ENV = {
     modulePrefix: 'stayon-ember',
-    environment: environment,
+    podModulePrefix: false,
+    environment,
     baseURL: '/',
     locationType: 'auto',
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
         // e.g. 'with-controller': true
-      }
+        'ember-htmlbars-component-generation': true,
+      },
     },
 
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
-    }
+    },
   };
 
   if (environment === 'development') {
@@ -39,9 +39,11 @@ module.exports = function(environment) {
     ENV.APP.rootElement = '#ember-testing';
   }
 
-  if (environment === 'production') {
-
-  }
+/*
+ *   if (environment === 'production') {
+ *
+ *   }
+ */
 
   return ENV;
 };

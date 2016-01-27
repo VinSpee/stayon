@@ -1,0 +1,38 @@
+{{#app-layout}}
+  {{#app-layout/header
+    class="u-depth u-depth1 Theme-bg--gray Theme-fg--yellow"
+  }}
+    <header
+      class="
+        u-flex
+        u-flexRow
+        u-flexAlignItemsCenter
+      "
+    >
+      {{#link-to
+        'index'
+        class="
+          u-flex
+          u-flexAlignSelfStretch
+          Type--middle
+          blank-u-pdLsm
+          blank-u-pdRmd
+        "
+      }}
+        <div class="u-flex u-flexAlignSelfCenter Theme-fg--yellow">
+          {{svg-icon icon="flash" size="large"}}
+        </div>
+      {{/link-to}}
+      {{app-nav}}
+      {{person-avatar
+        class="blank-u-pdAbb"
+        size="medium"
+        imageURL=model.user.avatar
+        name=model.user.name
+      }}
+    </header>
+  {{/app-layout/header}}
+  {{#app-layout/content}}
+    {{outlet}}
+  {{/app-layout/content}}
+{{/app-layout}}

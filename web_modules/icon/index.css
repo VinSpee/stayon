@@ -1,0 +1,55 @@
+/** @define Icon */
+
+:root {
+	--Icon-size--xs: .85rem;
+	--Icon-size--sm: 1rem;
+	--Icon-size--md: 1.25rem;
+	--Icon-size--lg: 1.5rem;
+	--Icon-size--xl: 2rem;
+	--Icon-size--xlWider: 3rem;
+}
+
+.Icon {
+	color: inherit;
+	display: inline-block;
+	position: relative;
+	vertical-align: middle;
+}
+
+.Icon-glyph {
+	display: block;
+	fill: currentColor;
+	height: 100%;
+	vertical-align: middle;
+	width: 100%;
+
+	@nest & path {
+		fill: inherit;
+	}
+
+}
+
+.Icon--xs {
+	height: var(--Icon-size--xs);
+	width: var(--Icon-size--xs);
+}
+
+.Icon--sm {
+	height: var(--Icon-size--sm);
+	width: var(--Icon-size--sm);
+}
+
+.Icon--md {
+	height: var(--Icon-size--md);
+	width: var(--Icon-size--md);
+}
+
+.Icon--lg {
+	height: var(--Icon-size--lg);
+	width: var(--Icon-size--lg);
+}
+
+.Icon--xl {
+	height: var(--Icon-size--xl);
+	width: var(--Icon-size--xl);
+}

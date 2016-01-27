@@ -1,0 +1,12 @@
+{{#each items as |item|}}
+  <li
+    class="
+      Grid-cell
+      u-flex
+      u-flexJustifyAround
+      {{spacing}}
+    "
+    >
+    {{yield item}}
+  </li>
+{{/each}}

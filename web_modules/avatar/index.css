@@ -1,0 +1,37 @@
+/** @define Avatar */
+
+:root {
+	--Avatar-bg: white;
+	--Avatar-size--sm: 2rem;
+	--Avatar-size--md: 4rem;
+	--Avatar-size--lg: 6rem;
+}
+
+.Avatar {
+	height: 100%;
+	width: 100%;
+	@nest &--sm {
+		height: var(--Avatar-size--sm);
+		width: var(--Avatar-size--sm);
+	}
+	@nest &--md {
+		height: var(--Avatar-size--md);
+		width: var(--Avatar-size--md);
+	}
+	@nest &--lg {
+		height: var(--Avatar-size--lg);
+		width: var(--Avatar-size--lg);
+	}
+}
+
+.Avatar-image {
+	height: 100%;
+	width: 100%;
+	display: block;
+	background-size: cover;
+	background-position: center;
+	background-color: var(--Avatar-bg);
+	background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1024 1024' width='1024' height='1024' fill='#000000'><path d='M763.688 490.812c2.374-13.936 4.312-28.124 4.312-42.812v-192c0-141.376-114.624-256-256-256s-256 114.624-256 256v192c0 14.688 1.938 28.876 4.312 42.812-154.874 55-260.312 157.938-260.312 277.188v192c0 35.376 28.624 64 64 64h896c35.376 0 64-28.624 64-64v-192c0-119.25-105.438-222.188-260.312-277.188zM384 256c0-70.688 57.312-128 128-128s128 57.312 128 128v192c0 70.688-57.312 128-128 128s-128-57.312-128-128v-192zM896 896h-768v-128c0-69.124 73.624-129.188 183.188-163 46.874 59.876 118.936 99 200.812 99s153.938-39.124 200.812-99c109.564 33.812 183.188 93.876 183.188 163v128z'></path></svg>");
+	border-radius: 50%;
+	transition: .2s linear all;
+}

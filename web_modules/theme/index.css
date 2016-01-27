@@ -1,0 +1,48 @@
+:root {
+  --Theme-color--yellow: #EAEF08;
+  --Theme-color--lightyellow: #F2F080;
+  --Theme-color--black: #30383A;
+  --Theme-color--gray: #666D70;
+  --Theme-color--white: #F4F5F0;
+  --Theme-font: 'anonymous-pro';
+}
+
+.Theme-font {
+  font-family: var(--Theme-font);
+}
+
+.Theme-fg--yellow {
+  color: var(--Theme-color--yellow);
+}
+
+.Theme-fg--lightyellow {
+  color: var(--Theme-color--lightyellow);
+}
+
+.Theme-fg--black {
+  color: var(--Theme-color--black);
+}
+
+.Theme-fg--gray {
+  color: var(--Theme-color--gray);
+}
+
+.Theme-fg--white {
+  color: var(--Theme-color--white);
+}
+
+.Theme-bg--yellow {
+  background-color: var(--Theme-color--yellow);
+}
+
+.Theme-bg--lightyellow {
+  background-color: var(--Theme-color--lightyellow);
+}
+
+.Theme-bg--black {
+  background-color: var(--Theme-color--black);
+}
+
+.Theme-bg--gray {
+  background-color: var(--Theme-color--gray);
+}

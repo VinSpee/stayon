@@ -1,0 +1,60 @@
+/* @define Type */
+
+:root {
+	--Type-size--xs: .8rem;
+	--Type-size--sm: 1rem;
+	--Type-size--md: 1.5rem;
+	--Type-size--lg: 2rem;
+	--Type-size--xl: 4rem;
+	--Type-color--white: white;
+	--Type-weight--normal: 400;
+	--Type-weight--bold: 700;
+}
+
+.Type-size--xs {
+	font-size: var(--Type-size--xs);
+}
+
+.Type-size--sm {
+	font-size: var(--Type-size--sm);
+}
+
+.Type-size--md {
+	font-size: var(--Type-size--md);
+}
+
+.Type-size--lg {
+	font-size: var(--Type-size--lg);
+}
+
+.Type-size--xl {
+	font-size: var(--Type-size--xl);
+}
+
+.Type--flat {
+	line-height: 1.25;
+}
+
+.Type-weight--normal {
+	font-weight: var(--Type-weight--normal);
+}
+
+.Type-style--italic {
+	font-style: italic;
+}
+
+.Type-weight--bold {
+	font-weight: var(--Type-weight--bold);
+}
+
+.Type--comfy {
+	letter-spacing: .25em;
+}
+
+.Type--uppercase {
+  text-transform: uppercase;
+}
+
+.Type--middle {
+	vertical-align: middle;
+}

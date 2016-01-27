@@ -1,0 +1,30 @@
+/** @define Nav; */
+
+:root {
+	--Nav-itemBg: black;
+	--Nav-itemFg: white;
+	--Nav-itemRadius: .175rem;
+}
+
+.Nav {
+	@nest & > li:first-of-type {
+		@nest & > a {
+			margin-left: 0;
+		}
+	}
+	@nest & > li:last-of-type {
+		@nest & > a {
+			margin-right: 0;
+		}
+	}
+}
+
+.Nav-item {
+	background-color: var(--Nav-itemBg);
+	margin: .5rem .25rem;
+	border-radius: var(--Nav-itemRadius);
+	text-transform: lowercase;
+	@nest &:any-link {
+		color: var(--Nav-itemFg);
+	}
+}
